@@ -1,0 +1,54 @@
+@url =  http://localhost:3005
+
+###
+
+GET {{url}}/
+
+###
+
+GET {{url}}/alumno/mostrar
+
+###
+
+GET {{url}}/alumno/porId/675d00e25271eb1c2305d53a
+
+###
+
+POST {{url}}/alumno/agregar
+Content-Type: application/json
+
+{
+    "id": 2,
+    "nombre": "Juan",
+    "apellido": "Riquelme",
+    "instituto": "ifts11",
+    "carrera": "Desarrollo",
+    "documentacionValidada": true
+}
+
+###
+
+PUT {{url}}/alumno/actualizar/675d00e25271eb1c2305d53a
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nombre": "Lisett",
+    "apellido": "Castillo",
+    "instituto": "ifts11",
+    "carrera": "Desarrollo",
+    "documentacionValidada": false
+}
+
+###
+DELETE {{url}}/alumno/delete 
+Content-Type: application/json
+
+{
+    "id": 5,
+    "nombre": "Brian",
+    "apellido": "Herrera",
+    "instituto": "ifts11",
+    "carrera": "Desarrollo",
+    "documentacion": "S"
+}
